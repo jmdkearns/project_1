@@ -17,3 +17,13 @@ post '/tags' do
   @tag.save
   redirect to ('/tags')
 end
+
+get '/tags/:id' do
+  @tag = Tag.find(params['id'])
+  erb(:'tag_views/show')
+end
+
+post '/tags/:id/delete' do
+  Tag.delete(params[:id])
+  redirect to("/tags")
+end

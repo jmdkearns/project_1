@@ -37,8 +37,9 @@ class Merchant
     return Merchant.map_item(sql)
   end
 
-  def self.delete_all()
-    sql = "DELETE FROM merchants"
-    run(sql)
+  def self.delete(id)
+    sql = "DELETE FROM merchants WHERE id=#{id}"
+    run_sql(sql)
   end
+
 end

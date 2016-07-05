@@ -1,0 +1,6 @@
+<b>Merchant:</b>
+<p><%= @merchant.name() %></p>
+
+<form action="/merchants/<%= @merchant.id %>/delete" method="post">
+<input type="submit" value="Delete">
+</form>

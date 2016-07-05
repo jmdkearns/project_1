@@ -1,0 +1,19 @@
+<h2>Transactions</h2>
+
+<b>Total Expenditure =</b>
+£<%= @account.total_expenditure %><br><br>
+
+<a href="/transactions/new"><img src= https://d30y9cdsu7xlg0.cloudfront.net/png/40980-200.png width="20" height="20"/></a><br><br
+
+<% @transactions.each do |transaction| %>
+  <%= transaction.date_trans %><br>
+  <%= transaction.merchant.name %><br>
+  <%= transaction.tag.name %><br>
+  <%= transaction.type %><br>
+  £<%= transaction.amount %><br>
+  <hr>
+<% end %>
+<br>
+
+
+

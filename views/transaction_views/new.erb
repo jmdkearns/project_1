@@ -1,0 +1,32 @@
+<h2>New Transaction</h2>
+
+<form action="/transactions" method="post">
+
+  <label for="date_trans">Select Date:</label>
+  <input type="date" name="date_trans"><br>
+
+  <label for="merchant_id">Select Merchant:</label>
+  <select name="merchant_id">
+    <% @merchants.each do |merchant| %>
+      <option value=<%= "#{merchant.id}" %>"><%= merchant.name %></option>
+    <% end %>  
+  </select><br>
+
+  <label for="tag_id">Select Category:</label>
+  <select name="tag_id">
+    <% @tags.each do |tag| %>
+      <option value=<%= "#{tag.id}" %>"><%= tag.name %></option>
+    <% end %>  
+  </select><br>
+
+  <input type="radio" name="type" value="Debit" checked> Debit
+  <input type="radio" name="type" value="Credit"> Credit<br>
+
+  <label for="amount">Amount: £</label>
+  <input type="numeric" name="amount" placeholder="0.00" step="0.00"><br>
+
+  <br>
+
+  <input type='submit' value="Add Transaction">
+
+</form>

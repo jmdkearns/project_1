@@ -1,3 +1,24 @@
+html, body {
+ margin: 0px;
+ padding: 0px;
+ background: url('wall_street.jpg') no-repeat center fixed;
+ background-size: cover;
+ color: white;
+}
+
+body a{
+    color: white;
+    text-decoration: none;
+}
+
+body a:hover{
+    color: red;
+}
+
+.icon img {
+    background-color: rgba(255, 255, 255, 0.80)
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;

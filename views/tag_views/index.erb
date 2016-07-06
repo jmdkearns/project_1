@@ -1,10 +1,11 @@
-<h2>Categories</h2>
+<h2>CATEGORIES</h2>
 
+<div class="icon">
 <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/89067-200.png" width="40" height="40">
 
 <a href="/tags/new"><img src= https://d30y9cdsu7xlg0.cloudfront.net/png/40980-200.png width="20" height="20"/></a><br>
-
+</div>
 <% @tags.each do |tag| %><br>
-<a href= "/tags/<%= tag.id %>"><%= tag.name %></a>
+<a href= "/tags/<%= tag.id %>"><%= tag.name %></a>&nbsp;&nbsp;
 £<%= @account.total_expenditure_by_tag(tag.id) %>
 <% end %> 

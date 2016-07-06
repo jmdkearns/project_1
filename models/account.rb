@@ -9,7 +9,7 @@ class Account
 
   def total_expenditure()
     total = 0
-    @transactions.each { |transaction| total += transaction.amount}
+    @transactions.each { |transaction| total += transaction.amount if transaction.type.downcase == 'debit'}
     return '%.2f' % total
   end
 

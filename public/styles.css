@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .content {
@@ -24,12 +25,13 @@ li a {
     text-decoration: none;
 }
 
-li a.active {
-    background-color: #4CAF50;
+li a:hover:not(.active) {
+    background-color: #6AAFE6;
     color: white;
 }
 
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+.add_button{
+  position: relative;
+  left: 50px;
+  bottom: 38px;
 }

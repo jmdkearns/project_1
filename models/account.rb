@@ -13,9 +13,9 @@ class Account
     return '%.2f' % total
   end
 
-  def total_expenditure_by_tag()
+  def total_expenditure_by_tag(tag)
     total = 0
-    @transactions.each { |transaction| total += transaction.amount if transaction.tag_id == @tag_id}
+    @transactions.each { |transaction| total += transaction.amount if transaction.type.downcase == 'debit' && transaction.tag_id == tag}
     return '%.2f' % total
   end
 

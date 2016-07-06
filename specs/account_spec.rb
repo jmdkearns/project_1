@@ -34,7 +34,7 @@ class TestAccount < MiniTest::Test
   end
 
   def test_total_expenditure_by_tag
-    assert_equal("51.98", @account.total_expenditure_by_tag)
+    assert_equal("51.98", @account.total_expenditure_by_tag(1))
   end
 
 end 

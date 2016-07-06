@@ -1,7 +1,8 @@
 require('sinatra')
 require('pry-byebug')
 require('sinatra/contrib/all')
-require_relative('../models/merchant')
+require_relative('../models/tag')
+
 
 get '/merchants' do
   @merchants = Merchant.all()

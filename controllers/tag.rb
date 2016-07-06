@@ -2,8 +2,15 @@ require('sinatra')
 require('pry-byebug')
 require('sinatra/contrib/all')
 require_relative('../models/tag')
+require_relative('../models/account')
+require_relative('../models/transaction')
+require_relative('../models/merchant')
+
 
 get '/tags' do
+  @transaction = Transaction.all()
+  @account = Account.new(@transaction)
+  @tags = Tag.all()
   @tags = Tag.all()
   erb(:'tag_views/index')
 end

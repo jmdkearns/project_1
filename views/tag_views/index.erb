@@ -2,9 +2,9 @@
 
 <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/89067-200.png" width="40" height="40">
 
-<a href="/tags/new"><img src= https://d30y9cdsu7xlg0.cloudfront.net/png/40980-200.png width="20" height="20"/></a><br><br>
+<a href="/tags/new"><img src= https://d30y9cdsu7xlg0.cloudfront.net/png/40980-200.png width="20" height="20"/></a><br>
 
-<% @tags.each do |tag| %>
-  <a href= "/tags/<%= tag.id %>" > <%= tag.name %> </a> <br>
-<% end %>
-<br>
+<% @tags.each do |tag| %><br>
+<a href= "/tags/<%= tag.id %>"><%= tag.name %></a>
+£<%= @account.total_expenditure_by_tag(tag.id) %>
+<% end %> 

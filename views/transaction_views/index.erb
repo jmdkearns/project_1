@@ -10,11 +10,11 @@
 </div>
 
 <% @transactions.each do |transaction| %>
-  <%= transaction.date_trans %><br>
-  <%= transaction.merchant.name %><br>
-  <%= transaction.tag.name %><br>
-  <%= transaction.type %><br>
-  <b>£<%= transaction.amount %></b><br>
-  <hr>
+<%= transaction.date_trans %><br>
+<%= transaction.merchant.name %><br>
+<%= transaction.tag.name %><br>
+<%= transaction.type %><br>
+<b>£<%= transaction.amount %></b><br>
+<hr>
 <% end %>
 <br>
